@@ -1,0 +1,49 @@
+{
+    "$schema": "https://raw.githubusercontent.com/BohemianCoding/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
+    "compatibleVersion": 3,
+    "bundleVersion": 1,
+    "icon": "icon.png",
+    "identifier": "com.sketch-plugin",
+    "commands": [{
+            "script": "./my-command.js",
+            "handlers": {
+                "run": "generate"
+            },
+            "shortcut": "",
+            "name": "Generate Styleguide",
+            "identifier": "generate"
+        },
+        {
+            "script": "./my-command.js",
+            "handlers": {
+                "run": "create"
+            },
+            "shortcut": "",
+            "name": "Update styleguide",
+            "identifier": "create"
+        },
+        {
+            "script": "./my-command.js",
+            "handlers": {
+                "run": "update"
+            },
+            "shortcut": "",
+            "name": "Update artboards",
+            "identifier": "update"
+        },
+        {
+            "script": "./my-command.js",
+            "handlers": {
+                "actions": {
+                    "Startup": "registerToolbarActions"
+                }
+            }
+        }
+    ],
+    "menu": {
+        "title": "sketch-styleguide",
+        "items": [
+            "Generate Styleguide"
+        ]
+    }
+}
